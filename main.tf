@@ -8,12 +8,11 @@ resource "aws_instance" "EmptyInstance" {
   ami           = "ami-0705384c0b33c194c"
   instance_type = "t3.micro"
   key_name      = "my-key-pair"
+  security_groups = [aws_security_group.web-sg.name]
 
   tags = {
     Name = "MyEmptyInstance"
   }
-
-  security_groups = ["web-sg"]
 }
 
 resource "aws_security_group" "web-sg" {
