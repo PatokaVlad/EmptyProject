@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "EmptyInstance" {
   ami           = "ami-0705384c0b33c194c"
   instance_type = "t3.micro"
-  key_name      = "my-key-pair"
+  key_name      = "EmptyProject"
   security_groups = [aws_security_group.empty-web-sg.name]
 
   tags = {
