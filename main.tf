@@ -8,15 +8,15 @@ resource "aws_instance" "EmptyInstance" {
   ami           = "ami-0705384c0b33c194c"
   instance_type = "t3.micro"
   key_name      = "EmptyProject"
-  security_groups = [aws_security_group.empty-web-sg.name]
+  security_groups = [aws_security_group.empty-web-sg2.name]
 
   tags = {
     Name = "MyEmptyInstance"
   }
 }
 
-resource "aws_security_group" "empty-web-sg" {
-  name        = "empty-web-sg"
+resource "aws_security_group" "empty-web-sg2" {
+  name        = "empty-web-sg2"
   description = "Allow HTTP traffic"
 
   ingress {
