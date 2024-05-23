@@ -15,8 +15,8 @@ resource "aws_instance" "EmptyInstance" {
   }
 }
 
-resource "aws_security_group" "web-sg" {
-  name        = "web-sg"
+resource "aws_security_group" "empty-web-sg" {
+  name        = "empty-web-sg"
   description = "Allow HTTP traffic"
 
   ingress {
